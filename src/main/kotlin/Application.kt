@@ -5,20 +5,14 @@ import mu.KLogging
 import parser.MiniArgParser
 
 class Application {
-    companion object: KLogging()
+    companion object : KLogging()
 
     fun main(args: Array<String>) = mainBody {
         logger.info() { "Starting miniw..." }
         val parsedArgs = ArgParser(args).parseInto(::MiniArgParser).run {
-            var projectLocation = "";
-
-            if("$init" = )
-
-            projectLocation = ProjectStructureCreator().init(parsedArgs.init.toString())
+            // TODO: if 'init' -> create structure
+            // else if 'build' -> fetch dependencies, start java
         }
-
-
-
     }
 }
 

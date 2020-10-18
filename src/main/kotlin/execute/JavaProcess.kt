@@ -1,11 +1,12 @@
 package execute
 
-import com.google.common.io.CharStreams
-import java.io.InputStreamReader
-
 class JavaProcess : Process() {
 
-    public override fun createAndReturn(line: String): String {
-        return super.createAndReturn("java $line")
+    public override fun createAndReturn(command: String): String {
+        return super.createAndReturn("java $command")
+    }
+
+    public override fun create(command: String): Boolean {
+        return super.create("java $command")
     }
 }

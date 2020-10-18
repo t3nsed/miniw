@@ -3,8 +3,8 @@ package io
 import java.nio.file.Files
 import java.nio.file.Path
 
-class JarReader {
+class JarReader(private val location: Path) {
     public fun read() {
-        Files.readAllLines(Path.of())
+        val potentialImports = Files.readAllLines(location)
     }
 }
